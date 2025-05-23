@@ -1,0 +1,116 @@
+name: 🐛 Bug Report
+description: Segnala un bug in Flux Framework
+title: "[BUG] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie per aver segnalato questo bug! 🐛
+        
+        Prima di procedere, controlla se il problema è già stato segnalato negli [Issues esistenti](https://github.com/profpaul001/flux/issues).
+
+  - type: input
+    id: version
+    attributes:
+      label: Versione Flux
+      description: Quale versione di Flux stai usando?
+      placeholder: "es. 0.1.0-alpha"
+    validations:
+      required: true
+
+  - type: input
+    id: python-version
+    attributes:
+      label: Versione Python
+      description: Quale versione di Python stai usando?
+      placeholder: "es. 3.11.5"
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: Sistema Operativo
+      description: Su quale sistema operativo si verifica il bug?
+      placeholder: "es. Ubuntu 22.04, macOS 13, Windows 11"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrizione del Bug
+      description: Descrivi chiaramente il problema che hai riscontrato
+      placeholder: Cosa è successo? Cosa ti aspettavi che succedesse?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Passi per Riprodurre
+      description: Fornisci i passi dettagliati per riprodurre il bug
+      placeholder: |
+        1. Vai a '...'
+        2. Clicca su '...'
+        3. Esegui il comando '...'
+        4. Vedi l'errore
+    validations:
+      required: true
+
+  - type: textarea
+    id: code
+    attributes:
+      label: Codice di Esempio
+      description: Se applicabile, includi il codice che causa il problema
+      render: python
+      placeholder: |
+        # Il tuo codice Flux qui
+        @route("/example")
+        def example():
+            return "Hello World"
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamento Atteso
+      description: Descrivi cosa ti aspettavi che succedesse
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Comportamento Attuale
+      description: Descrivi cosa è successo invece
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log e Messaggi di Errore
+      description: Includi eventuali log, traceback o messaggi di errore
+      render: shell
+      placeholder: |
+        Incolla qui i log completi...
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Informazioni Aggiuntive
+      description: Aggiungi qualsiasi altra informazione utile per risolvere il problema
+      placeholder: Screenshot, configurazioni speciali, workaround trovati, etc.
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Checklist
+      options:
+        - label: Ho cercato negli issues esistenti
+          required: true
+        - label: Ho fornito tutte le informazioni richieste
+          required: true
+        - label: Il problema è riproducibile
+          required: true
