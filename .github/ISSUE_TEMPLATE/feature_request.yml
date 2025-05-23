@@ -1,0 +1,128 @@
+name: 💡 Feature Request
+description: Suggerisci una nuova funzionalità per Flux Framework
+title: "[FEATURE] "
+labels: ["enhancement", "needs-discussion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie per il tuo suggerimento! 💡
+        
+        Prima di procedere, controlla se la funzionalità è già stata richiesta nelle [Discussions](https://github.com/profpaul001/flux/discussions) o negli [Issues esistenti](https://github.com/profpaul001/flux/issues).
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema da Risolvere
+      description: Descrivi il problema o la necessità che questa funzionalità risolverebbe
+      placeholder: |
+        Es. "È frustrante quando devo... perché..."
+        Es. "Sarebbe utile poter... per..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Soluzione Proposta
+      description: Descrivi la funzionalità che vorresti vedere implementata
+      placeholder: |
+        Descrivi dettagliatamente come dovrebbe funzionare questa funzionalità...
+    validations:
+      required: true
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Esempio di Utilizzo
+      description: Mostra come useresti questa funzionalità
+      render: python
+      placeholder: |
+        # Esempio di come dovrebbe funzionare
+        @app.middleware
+        def auth_middleware(request):
+            # La tua nuova funzionalità qui
+            pass
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative Considerate
+      description: Hai considerato altre soluzioni o workaround?
+      placeholder: |
+        Descrivi altre soluzioni che hai considerato e perché non sono sufficienti...
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priorità
+      description: Quanto è importante questa funzionalità per te?
+      options:
+        - "🔥 Critica - Blocca il mio progetto"
+        - "⚡ Alta - Molto importante"
+        - "📋 Media - Sarebbe utile"
+        - "💡 Bassa - Nice to have"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: Complessità Stimata
+      description: Quanto pensi che sia complessa da implementare?
+      options:
+        - "🟢 Semplice - Piccola modifica"
+        - "🟡 Media - Richiede alcuni cambiamenti"
+        - "🟠 Complessa - Grandi modifiche"
+        - "🔴 Molto Complessa - Ristrutturazione maggiore"
+        - "❓ Non so stimare"
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Categoria
+      description: A quale area di Flux si riferisce questa funzionalità?
+      options:
+        - "🏗️ Core Framework"
+        - "🛠️ CLI Tools"
+        - "🗄️ Database/ORM"
+        - "🌐 HTTP/Routing"
+        - "🎨 Template Engine"
+        - "📦 Package Manager"
+        - "🧪 Testing"
+        - "📚 Documentation"
+        - "⚡ Performance"
+        - "🔒 Security"
+        - "🔌 Integrations"
+        - "❓ Other"
+
+  - type: textarea
+    id: breaking
+    attributes:
+      label: Breaking Changes
+      description: Questa funzionalità richiederebbe modifiche che rompono la compatibilità?
+      placeholder: |
+        Es. "No, è completamente retrocompatibile"
+        Es. "Sì, richiederebbe di modificare..."
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Suggerimenti per l'Implementazione
+      description: Hai idee su come implementare questa funzionalità?
+      placeholder: |
+        Se hai esperienza tecnica, condividi le tue idee su come implementare questa funzionalità...
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Checklist
+      options:
+        - label: Ho cercato nelle discussions e issues esistenti
+          required: true
+        - label: Ho descritto chiaramente il problema e la soluzione
+          required: true
+        - label: Sono disponibile a discutere questa funzionalità
+          required: true
+        - label: Potrei contribuire all'implementazione (opzionale)
+          required: false
